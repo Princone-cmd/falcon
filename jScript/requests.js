@@ -75,6 +75,7 @@ share.addEventListener('click', () => {
 
 onSnapshot(doc(db, 'seller', phone), doc => {
   setMenuList(doc.data()['pincode'], doc.data()['hub']);
+  
   localStorage.setItem('hub', (doc.data()['hub']));
 });
 
@@ -85,6 +86,7 @@ function setMenuList(pincode, hub) {
     localStorage.setItem('pincodeIs', pincodes[0]);
   }
 
+  log.console(pincodes);
   setPincodesToMenu(pincodes, hub);
 
   getData();

@@ -52,7 +52,7 @@ document.getElementById("login").onclick = function(){
 };
 
 function myFunction() {
-    location.replace('../htmls/dashboard.html');
+    location.replace('dashboard.html');
 }
 
 function setLocalData(phone){

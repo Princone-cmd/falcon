@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" name="viewport" width="device-width" , intitial-scale="1.0">
+  <title>Falcon Store</title>
+  <link rel="stylesheet" href="../csss/partner.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2>Falcon Store</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-round">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="../htmls/dashboard.html">
+          <span class="material-icons-round">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="../htmls/requests.html">
+          <span class="material-icons-round">verified</span>
+          <h3>Requests</h3>
+        </a>
+        <a href="../htmls/products.html">
+          <span class="material-icons-round">category</span>
+          <h3>Products</h3>
+        </a>
+        <a href="#" class="active">
+          <span class="material-icons-round">local_shipping</span>
+          <h3>Delivery Partners</h3>
+        </a>
+        <a href="../htmls/settings.html">
+          <span class="material-icons-round">settings</span>
+          <h3>Settings</h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-round">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+        <main>
+          <div class="recent_orders">
+            <h2>Partners</h2>
+
+            <div class="top">
+
+              <div class="dropdown">
+                <div class="select">
+                  <span class="selected">Select Pincode</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                </ul>
+              </div>
+
+              <div class="searchbar">
+                <input type="text" name="" value=""  id="search_bar" placeholder="Search Number">
+              </div>
+
+            </div>
+
+            <div class="middle">
+              <ul class="partner_list" id="partner_list">
+              </ul>
+            </div>
+
+          </div>
+        </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="../jScript/partner.js" charset="utf-8" type="module"></script>
+</body>
+
+</html>

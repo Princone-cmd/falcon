@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" name="viewport" width="device-width" , intitial-scale="1.0">
+  <title>Falcon Store</title>
+  <link rel="stylesheet" href="../csss/requests.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2>Falcon Store</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-round">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="../htmls/dashboard.html">
+          <span class="material-icons-round">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="#" class="active">
+          <span class="material-icons-round">verified</span>
+          <h3>Requests</h3>
+          <span class="notification" id="count_requests">0</span>
+        </a>
+        <a href="../htmls/products.html">
+          <span class="material-icons-round">category</span>
+          <h3>Products</h3>
+        </a>
+        <a href="../htmls/partner.html">
+          <span class="material-icons-round">local_shipping</span>
+          <h3>Delivery Partners</h3>
+        </a>
+        <a href="../htmls/settings.html">
+          <span class="material-icons-round">settings</span>
+          <h3>Settings</h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-round">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <div class="recent_orders">
+
+        <div class="top">
+
+          <h2>Requests</h2>
+
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected">Sort by</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu" id="menu">
+
+            </ul>
+          </div>
+
+          <div class="searchbar">
+            <input type="text" name="" value="" id="search_bar" placeholder="Search products...">
+          </div>
+
+          <div id="share_list" class="share_list">
+            <span id="share">Share</span>
+          </div>
+
+        </div>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>S No</th>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Customer Number</th>
+                <th>Address</th>
+                <th>Payment</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </main>
+
+    <div id="print_delivery_list" class="print_delivery_list">
+
+      <div class="invoice-box">
+
+        <div class="top">
+
+          <img
+            src="../images/logo.jpg"
+            style="width: 120px" />
+
+          <div class="imp">
+            <h3 id="invoice_name">Name: Charan</h3>
+            <h3 id="invoice_id">OrderID: FSAG2879</h3>
+          </div>
+
+          <div class="imp">
+            <h3 id="invoice_pincode">Pincode: 533003</h3>
+            <h3 id="invoice_gst_number" width="200px">GSTIN: 123456879</h3>
+          </div>
+        </div>
+
+        <table cellpadding="0" cellspacing="0" class="invoice_table">
+
+          <tr class="address_show">
+            <h3 id="invoice_address" width="200px">Address: satyakameswari street, dwarakanagar, kakinada, 533003, D No 65-2-10</h3>
+          </tr>
+
+          <tr class="heading">
+            <td>Payment Method</td>
+            <td></td>
+            <td></td>
+            <td id="payment_status">COD</td>
+            <td></td>
+          </tr>
+
+          <tr class="heading">
+            <td>Item</td>
+            <td>Unit Weight</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Total</td>
+          </tr>
+
+          <tr class="total">
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td id="total_price">385.00</td>
+          </tr>
+        </table>
+
+        <h2 id="close">Back to requests</h2>
+      </div>
+
+    </div>
+
+    <div class="delivery_panel">
+      <div class="share_panel">
+        <h2 id="partner_selected">Select Delivery Partner to Share Requests</h2>
+
+        <div class="partner_searchbar">
+          <input type="text" name="" value="" id="partner_search_bar" placeholder="Search Partner...">
+        </div>
+
+        <div class="delivery_table">
+          <table id="share_table">
+              <tr>
+                <td>Name</td>
+                <td>Phone</td>
+                <td>Pincode</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Charan</td>
+                <td>8639861311</td>
+                <td>533003</td>
+                <td id="select_partner">Select</td>
+              </tr>
+          </table>
+
+        </div>
+
+        <input class="confirm" id="confirm" type="text" name="confirm" placeholder="Enter Password">
+
+        <div class="options_share">
+          <span id="cancel_share">Cancel</span>
+          <span id="share_button">Share</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="../jScript/requests.js" charset="utf-8" type="module"></script>
+</body>
+
+</html>

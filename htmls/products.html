@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" name="viewport" width="device-width" , intitial-scale="1.0">
+  <title>Falcon Store</title>
+  <link rel="stylesheet" href="../csss/products.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2>Falcon Store</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-round">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="../htmls/dashboard.html">
+          <span class="material-icons-round">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="../htmls/requests.html">
+          <span class="material-icons-round">verified</span>
+          <h3>Requests</h3>
+        </a>
+        <a href="#" class="active">
+          <span class="material-icons-round">category</span>
+          <h3>Products</h3>
+        </a>
+        <a href="../htmls/partner.html">
+          <span class="material-icons-round">local_shipping</span>
+          <h3>Delivery Partners</h3>
+        </a>
+        <a href="../htmls/settings.html">
+          <span class="material-icons-round">settings</span>
+          <h3>Settings</h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-round">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <div class="recent_orders">
+        <h2>Products</h2>
+
+        <div class="top">
+
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected">Sort by</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li>All</li>
+              <li>Active</li>
+              <li>Inactive</li>
+              <li>Offers</li>
+            </ul>
+          </div>
+
+          <div id="add_product" class="add_product">
+            <span id="add">Add Product</span>
+          </div>
+
+          <div class="searchbar">
+            <input type="text" name="" value=""  id="search_bar" placeholder="Search products...">
+          </div>
+
+        </div>
+
+        <div class="middle">
+          <ul class="products_list" id="products_list">
+          </ul>
+        </div>
+
+      </div>
+    </main>
+
+    <div class="product_details">
+      <div class="product_form">
+        <div class="product_contents">
+          <h1>Add Product</h1>
+          <div class="form">
+            <div class="txt_field">
+              <input type="text" name="title" required id="name">
+              <span></span>
+              <label>Product Title</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="description" required id="description">
+              <span></span>
+              <label>Product Description</label>
+            </div>
+            <div class="dropdown_two">
+              <div class="select_two">
+                <span class="selected_two">Categoires</span>
+                <div class="caret"></div>
+              </div>
+              <ul class="menu_two">
+                <li>Grains</li>
+                <li>Pulses</li>
+                <li>Flours</li>
+                <li>Body Care</li>
+                <li>Hair Care</li>
+                <li>Oral Care</li>
+                <li>Cleaning</li>
+                <li>Sanitation</li>
+                <li>Beverages</li>
+                <li>Snacks</li>
+                <li>Packed Foods</li>
+                <li>Spices</li>
+	<li>Health Mixes</li>
+                <li>Household Supplies</li>
+                <li>Pet Foods</li>
+                <li>Dry fruits and Nuts</li>
+                <li>Others</li>
+
+              </ul>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="url" required id="url" oninput="filledInput()">
+              <span></span>
+              <label>Image URL</label>
+            </div>
+            <div class="txt_field">
+              <input type="number" name="price" required id="price">
+              <span></span>
+              <label>Product Unit Price</label>
+            </div>
+            <div class="txt_field">
+              <input type="number" name="discount" required id="discount">
+              <span></span>
+              <label>Product Discount Price</label>
+            </div>
+            <div class="txt_field">
+              <input type="number" name="weight" required id="weight">
+              <span></span>
+              <label>(Milli Liters / Grams / Pieces) Per Unit (Eg. 450)</label>
+            </div>
+            <div class="dropdown_three">
+              <div class="select_three">
+                <span class="selected_three">Units</span>
+                <div class="caret"></div>
+              </div>
+              <ul class="menu_three">
+                <li>Milli litres</li>
+                <li>Litres</li>
+                <li>Grams</li>
+                <li>Kilograms</li>
+                <li>Pcs</li>
+              </ul>
+            </div>
+            <div class="status">
+            <label class="switch">
+              <input type="checkbox" id="stock_status" onclick="stockStatus()">
+              <span class="slider round" id="status_text">Inactive</span>
+            </label>
+          </div>
+            <input type="submit" name="submit" value="Submit" id="submit">
+            <input type="submit" name="cancel" value="cancel" id="cancel">
+          </div>
+        </div>
+        <div class="img_view">
+          <img id="img_product" src="" alt="Product">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="../jScript/products.js" charset="utf-8" type="module"></script>
+</body>
+
+</html>

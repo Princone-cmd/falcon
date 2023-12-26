@@ -1,0 +1,137 @@
+:root {
+    --color-background: #EAF6F6;
+    --color-sidebar: #062C30;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #ffffff;
+    --color-info-dark: #7d8da1;
+    --color-dark-variant: #677483;
+    --color-primary: #123456;
+    --color-inactive: #7C99AC;
+    --color-button-green: #6D9773;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: var(--color-background);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.card:hover{
+    box-shadow: none;
+}
+
+.card h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-sidebar);
+}
+
+.card .form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.form .txt_field{
+  position: relative;
+  border-bottom: 2px solid var(--color-sidebar);
+  margin: 30px 0;
+}
+
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: var(--color-inactive);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.txt_field span::before{
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-sidebar);
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: var(--color-sidebar);
+}
+
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  background: var(--color-button-green);
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover{
+  background: var(--color-sidebar);
+  transition: all 300ms ease;
+}
+
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-inactive);
+}
+
+.signup_link a{
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signup_link a:hover{
+  text-decoration: underline;
+}

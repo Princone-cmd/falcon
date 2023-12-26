@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Falcon Stores Login</title>
+  <link rel="stylesheet" href="../csss/login.css">
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Login</h1>
+    <div class="form">
+      <div class="txt_field">
+        <input type="number" name="phone" required id="phoneNumber">
+        <span></span>
+        <label>Phone Number</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" name="password" required id="password">
+        <span></span>
+        <label for="password">Password</label>
+      </div>
+      <input type="submit" name="login" value="Login" id="login">
+      <div class="signup_link">
+        Not a Member? <a href="../htmls/signup.html">Signup</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="../jScript/login.js" charset="utf-8" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Falcon Stores Signup</title>
+    <link rel="stylesheet" href="../csss/signup.css">
+  </head>
+  <body>
+
+    <div class="card">
+        <h1>Signup</h1>
+        <div class="form">
+            <div class="txt_field">
+                <input type="text" name="username" required id="name">
+                <span></span>
+                <label>Username (E.g. Alex Jimmy)</label>
+            </div>
+            <div class="txt_field">
+                <input type="email" name="email" required id="email">
+                <span></span>
+                <label>Email ID (example@gmail.com)</label>
+            </div>
+            <div class="txt_field">
+                <input type="number" name="phone" required id="number">
+                <span></span>
+                <label>Phone Number (E.g. 9858xxxxxx)</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required id="password">
+                <span></span>
+                <label>Password (E.g. Upper, Lower, Number, Symbols)</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="hub" required id="hub">
+                <span></span>
+                <label>Hub Name (E.g. kakinada, vizag)</label>
+            </div>
+            <div class="txt_field">
+                <input type="number" name="pincode" required id="pincode">
+                <span></span>
+                <label>Pincode (E.g. 533003)</label>
+            </div>
+            <div class="txt_field">
+              <input type="address" name="address" required id="address">
+              <span></span>
+              <label>Store Address (E.g. Door No, Street, Colony...)</label>
+            </div>
+            <input type="submit" name="signup" value="Signup" id="signup">
+            <div class="login_link">
+                Already a Member? <a href="../htmls/login.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="../jScript/signup.js" charset="utf-8" type="module"></script>
+  </body>
+</html>

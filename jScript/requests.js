@@ -86,7 +86,6 @@ function setMenuList(pincode, hub) {
     localStorage.setItem('pincodeIs', pincodes[0]);
   }
 
-  log.console(pincodes);
   setPincodesToMenu(pincodes, hub);
 
   getData();

@@ -64,7 +64,7 @@ onSnapshot(doc(db, 'doodle', "logo"), doc => {
 });
 
 function dashFunction() {
-  location.replace('../htmls/dashboard.html');
+  location.replace('dashboard.html');
 }
 
 function validate_email(input) {}
